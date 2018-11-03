@@ -1,0 +1,85 @@
+//reset
+
+*{
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+}
+
+
+$main-grey: #f4f4f4;
+$border-grey: #eeeeee;
+$text-grey:#b3b3b3;
+$button-blue: #0975c8;
+$event-blue: #c2e4fc;
+
+.header{
+	width:100vw;
+	height:15vh;
+	background-color: $main-grey;
+	box-shadow: 0 4px 2px -2px $text-grey;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding: 0 45px 15px 45px;
+	& .btn{
+		line-height: 25px;
+		color: white;
+		background-color: $button-blue;
+		border: none;
+		padding:0 10px 0 10px;
+		border-radius: 5px;
+	}
+}
+.search__btn{
+	border:0;
+	width:10px;
+	height: 10px;
+	background-color: $main-grey;
+	
+}
+svg{
+}
+.main{
+	padding:15px 45px 45px 45px;
+	display:flex;
+	flex-direction: column;
+}
+.calendar_plate{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cell{
+	flex: 1 1 13%;
+	border: 1px solid $border-grey;
+	height: 100px;
+	padding:5px;
+	
+}
+.actual__cells{
+	
+	color: black;
+}
+.another__cells{
+	color:$text-grey;
+}
+.today{
+	background-color: $main-grey;
+}
+.full{
+	background-color: $event-blue;
+}
+.modal{
+	background-color: $main-grey;
+	padding: 15px;
+	width:50%;
+	display: none;
+	
+}
+.modal__form{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
