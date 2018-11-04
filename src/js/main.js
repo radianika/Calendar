@@ -16,7 +16,6 @@
 		for (let i = 0; i < events.events.length; i++) {
 			eventsDates.push(events.events[i].date);
 		}
-		console.log(eventsDates);
 		//переменные для текущей даты
 		var myDate = new Date();
 		var myWeekDay = myDate.getDay();
@@ -26,7 +25,8 @@
 		//классы
 		var anotherMonthCells = 'another__cells';
 		var actualMonthCells = 'actual__cells';
-
+var open = 'open';
+var close = 'close';
 		//переменные для dom=элемеентов	
 		var plate = document.querySelector('.calendar_plate');
 		var actualMonthAndYear = document.querySelector('.current');
@@ -34,6 +34,9 @@
 		var nextMonth = document.querySelector('.js-nextMonth');
 		var actualMonth = document.querySelector('.js-actualMonth');
 		var cells = plate.childNodes;
+		var closeBtn = document.querySelector('.js-closeBtn');
+var insertBtn = document.querySelector('.js-insert');
+var modal = document.querySelector('.js-modal');
 
 		//неделя начинается с понедельника
 		function mondayFirst(weekDay) {
@@ -143,7 +146,7 @@
 				myYear -= 1;
 			}
 			plate.innerHTML = ('');
-			generateCalendar(myYear, myMonth)
+			generateCalendar(myYear, myMonth);
 
 		});
 
@@ -192,3 +195,16 @@
 				}
 			}
 		}
+//открытие модального окна
+
+ function openModal(){
+	 modal.classList.remove(close);
+	 modal.classList.add(open);
+ }
+function closeModal(){
+	modal.classList.add(close);
+	 modal.classList.remove(open);
+}
+
+insertBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);

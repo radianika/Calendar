@@ -35,11 +35,10 @@ var path = {
 
 
 gulp.task('scripts', function () {
-	gulp.src(path.src.js)
-		.pipe(babel({
+	  gulp.src(path.src.js)
+				.pipe(babel({
 			presets: ['@babel/env']
 		}))
-		.pipe(uglify())
 		.pipe(gulp.dest(path.build.js));
 });
 

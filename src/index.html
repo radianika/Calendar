@@ -6,45 +6,42 @@
 	<title>Календарь</title>
 
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
 
 </head>
 
 <body>
 	<header class='header'>
 		<div>
-			<button type="button" class="btn">Добавить</button>
+			<button type="button" class="btn js-insert">Добавить</button>
 			<button type="reset" class="btn">Обновить</button>
 		</div>
 		<form action="" method="post" class="search">
-			<button type="submit" class="search__btn">
-	<svg width="10" height="10" viewBox="0 0 250 300"><path  d="M244.186,214.604l-54.379-54.378c-0.289-0.289-0.628-0.491-0.93-0.76
-		c10.7-16.231,16.945-35.66,16.945-56.554C205.822,46.075,159.747,0,102.911,0S0,46.075,0,102.911
-		c0,56.835,46.074,102.911,102.91,102.911c20.895,0,40.323-6.245,56.554-16.945c0.269,0.301,0.47,0.64,0.759,0.929l54.38,54.38
-		c8.169,8.168,21.413,8.168,29.583,0C252.354,236.017,252.354,222.773,244.186,214.604z M102.911,170.146
-		c-37.134,0-67.236-30.102-67.236-67.235c0-37.134,30.103-67.236,67.236-67.236c37.132,0,67.235,30.103,67.235,67.236
-		C170.146,140.044,140.043,170.146,102.911,170.146z"/>
-</svg>
+			<button type="submit" class="search__btn"><i class="fas fa-search"></i>
 </button>
-			<input type="search" placeholder="Событие, дата или уастник">
+			<input type="search" placeholder="Событие, дата или участник">
 		</form>
 	</header>
 	<main class="main">
 		<div class="navigate">
-			<button class="left-btn js-previousMonth">Предыдущий</button>
+			<div class="navigate__months"><button class="btn js-previousMonth"> <i class="fas fa-angle-left"></i> </button>
 			<p class="current"></p>
-			<button class="right-btn js-nextMonth">Следующий</button>
-			<button type="button" class="js-actualMonth">Сегодня</button>
+			<button class="btn js-nextMonth"> <i class="fas fa-angle-right"></i> </button>
+			</div>
+			<button type="button" class="js-actualMonth btn">Сегодня</button>
 		</div>
 		<div class="calendar_plate"></div>
-<div class="modal">
+<div class="modal js-modal close">
 	<form class="modal__form">
-	<button type="reset">Крестик</button>
+	<button type="reset" class="form__close js-closeBtn"><i class="fas fa-times"></i></button>
 		<input type="text" name="event" placeholder="Событие">
 		<input type="date" name="date" placeholder="Дата">
 		<input type="text" name="members" placeholder="Участники">
 		<textarea name="description" placeholder="Описание"></textarea>
-		<div><button type="submit">Готово</button>
-			<button type="reset">Удалить</button></div>
+		<div><button type="submit" class="btn">Готово</button>
+			<button type="reset" class="btn">Удалить</button></div>
 		
 	</form>
 </div>
